@@ -254,4 +254,4 @@ paket-files/
 src/Resumification.Web.Mvc/secrets.json
 src/Resumification.Web.Host/secrets.json
 src/Resumification.Migrator/secrets.json
-src/Resumification.Web.Host/App_Data/Logs/Logs.txt
+src/Resumification.Web.Host/App_Data/Logs/

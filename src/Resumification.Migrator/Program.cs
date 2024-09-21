@@ -4,6 +4,7 @@ using Abp;
 using Abp.Castle.Logging.Log4Net;
 using Abp.Collections.Extensions;
 using Abp.Dependency;
+using Abp.Timing;
 
 namespace Resumification.Migrator
 {
@@ -14,6 +15,7 @@ namespace Resumification.Migrator
         public static void Main(string[] args)
         {
             ParseArgs(args);
+            Clock.Provider = ClockProviders.Utc;
 
             using (var bootstrapper = AbpBootstrapper.Create<ResumificationMigratorModule>())
             {
