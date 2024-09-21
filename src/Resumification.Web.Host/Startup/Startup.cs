@@ -17,6 +17,7 @@ using Abp.AspNetCore.SignalR.Hubs;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.IO;
+using Abp.Timing;
 
 namespace Resumification.Web.Host.Startup
 {
@@ -32,6 +33,7 @@ namespace Resumification.Web.Host.Startup
         public Startup(IWebHostEnvironment env)
         {
             _hostingEnvironment = env;
+            Clock.Provider = ClockProviders.Utc;
             _appConfiguration = env.GetAppConfiguration();
         }
 
